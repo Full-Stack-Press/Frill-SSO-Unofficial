@@ -1,7 +1,5 @@
 <?php
 
-namespace frill\sso;
-
 /**
  * Plugin Name:     Frill SSO Unofficial
  * Plugin URI:      https://gitlab.com/fullstackpress/frill-sso/-/releases
@@ -27,8 +25,11 @@ function frill_sso_page_settings_link($links)
 add_filter('plugin_row_meta', 'frill_sso_row_meta', 10, 2);
 function frill_sso_row_meta($links, $file)
 {
-    if (\strpos($file, 'frill-sso-plugin.php') !== \false) {
-        $new_links = array('<a href="https://www.facebook.com/groups/180279940621320" target="_blank">' . __('Frill.co Official Community Group', 'frill-sso') . '</a>', '<a href="https://frill.co/" target="_blank">' . __('Frill.co', 'frill-sso') . '</a>');
+    if (strpos($file, 'frill-sso-plugin.php') !== \false) {
+        $new_links = array(
+            '<a href="https://www.facebook.com/groups/180279940621320" target="_blank">' . __('Frill.co Official Community Group', 'frill-sso') . '</a>',
+             '<a href="https://frill.co/" target="_blank">' . __('Frill.co', 'frill-sso') . '</a>'
+        );
         $links = \array_merge($links, $new_links);
     }
     return $links;
