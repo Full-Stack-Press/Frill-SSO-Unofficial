@@ -1,4 +1,4 @@
-=== Frill.co SSO - Unofficial ===
+=== Unofficial - Frill.co SSO ===
 Contributors: zarex, afknet, jessetuttle, reesebess, fullstackpress, fullstackology
 Tags: frill.co, frill, feedback, roadmap, changelog
 Requires at least: 5.7
@@ -8,11 +8,11 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Frill.co SSO Unofficial plugin, enable SSO (Single-sign-on) login from WordPress to [Frill](https://frill.co/ "Frill.co")
+Unofficial Frill.co SSO plugin, enable SSO (Single-sign-on) login from WordPress to [Frill](https://frill.co/ "Frill.co")
 
 == Description ==
 
-This Frill.co SSO plugin enables WordPress sites to hook into the Frill system and use their existing WordPress users as the base for SSO, Single-sign-on!
+This Unofficial Frill.co SSO plugin enables WordPress sites to hook into the Frill system and use their existing WordPress users as the base for SSO, Single-sign-on!
 
 So how does this work? Simple:
 #1 get a [Frill](https://frill.co/ "Frill.co") account, yes there is a free option
@@ -66,9 +66,9 @@ Frill can be used by anyone looking to collect feedback from their usersthat eve
 
 1. Upload `Frill-sso plugin` to the `/wp-content/plugins/` directory or install thru WordPress plugin installer.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to your Frill.co site, access your settings from the top right user icon. Go to "Single Sign-On" and input your redirect URL. This is the URL for your Frill site, like `https://feedback.example.com`
+3. Go to your Frill.co site, access your settings from the top right user icon. Go to "Single Sign-On" and input your redirect URL. This is the URL for your site, like `https://feedback.example.com`
 4. From the same location copy your SSO Key, this is used to Authenticate your users. The format will be `xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
-5. Go to WordPress Admin dashboard -> Settings -> Frill SSO and input your Frill.co credentials.
+5. Go to WordPress Admin dashboard -> Settings -> Frill SSO site and input your Frill.co credentials.
 6. Add a custom link to any menu or button on your site with `?frill_sso_redirect` set as the link.
 7. You should be ready to go! If you have any problems, connect with the Frill Community Group on Facebook at https://www.facebook.com/groups/180279940621320
 
@@ -110,6 +110,9 @@ To support continued development of this plugin into the future with new feature
 3. Frill Administration
 
 == Change log ==
+= 1.0.1 2021-07-09 =
+* Fix on typo in readme file, installation step 3.
+* Change plugin name from Frill SSO Unofficial to Unofficial Frill SSO
 
 = 1.0.0 2021-07-03 =
 * Initial Public Beta Release

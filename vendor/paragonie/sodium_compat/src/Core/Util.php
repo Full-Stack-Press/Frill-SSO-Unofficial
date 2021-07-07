@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core_Util', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Util', \false)) {
     return;
 }
 /**
@@ -836,4 +836,4 @@ abstract class ParagonIE_Sodium_Core_Util
 /**
  * Class ParagonIE_Sodium_Core_Util
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_Util', 'ParagonIE_Sodium_Core_Util', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Util', 'ParagonIE_Sodium_Core_Util', \false);

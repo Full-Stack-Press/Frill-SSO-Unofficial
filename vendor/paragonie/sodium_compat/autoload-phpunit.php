@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 require_once \dirname(__FILE__) . '/vendor/autoload.php';
 if (\PHP_VERSION_ID >= 50300) {

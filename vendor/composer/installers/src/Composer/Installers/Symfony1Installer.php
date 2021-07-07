@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
 /**
  * Plugin installer for symfony 1.x

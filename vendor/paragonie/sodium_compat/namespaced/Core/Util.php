@@ -1,7 +1,7 @@
 <?php
 
-namespace frill\sso\ParagonIE\Sodium\Core;
+namespace unofficial\frill\sso\ParagonIE\Sodium\Core;
 
-class Util extends \frill\sso\ParagonIE_Sodium_Core_Util
+class Util extends \unofficial\frill\sso\ParagonIE_Sodium_Core_Util
 {
 }

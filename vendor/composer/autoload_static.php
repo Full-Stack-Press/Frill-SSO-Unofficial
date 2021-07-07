@@ -11,19 +11,19 @@ class ComposerStaticInit9ae51db2047537785c02dcff882db51d
     );
 
     public static $prefixLengthsPsr4 = array (
-        'f' => 
+        'u' => 
         array (
-            'frill\\sso\\Firebase\\JWT\\' => 23,
-            'frill\\sso\\Composer\\Installers\\' => 30,
+            'unofficial\\frill\\sso\\Firebase\\JWT\\' => 34,
+            'unofficial\\frill\\sso\\Composer\\Installers\\' => 41,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'frill\\sso\\Firebase\\JWT\\' => 
+        'unofficial\\frill\\sso\\Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
-        'frill\\sso\\Composer\\Installers\\' => 
+        'unofficial\\frill\\sso\\Composer\\Installers\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),

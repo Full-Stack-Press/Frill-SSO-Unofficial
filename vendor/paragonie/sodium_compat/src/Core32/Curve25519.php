@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core32_Curve25519', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core32_Curve25519', \false)) {
     return;
 }
 /**
@@ -2524,4 +2524,4 @@ abstract class ParagonIE_Sodium_Core32_Curve25519 extends ParagonIE_Sodium_Core3
  *
  * @ref https://github.com/jedisct1/libsodium/blob/master/src/libsodium/crypto_core/curve25519/ref10/curve25519_ref10.c
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core32_Curve25519', 'ParagonIE_Sodium_Core32_Curve25519', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core32_Curve25519', 'ParagonIE_Sodium_Core32_Curve25519', \false);

@@ -1,10 +1,10 @@
 <?php
 
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
-use frill\sso\Composer\IO\IOInterface;
-use frill\sso\Composer\Composer;
-use frill\sso\Composer\Package\PackageInterface;
+use unofficial\frill\sso\Composer\IO\IOInterface;
+use unofficial\frill\sso\Composer\Composer;
+use unofficial\frill\sso\Composer\Package\PackageInterface;
 abstract class BaseInstaller
 {
     protected $locations = array();

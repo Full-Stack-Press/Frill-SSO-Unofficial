@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core32_HSalsa20', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core32_HSalsa20', \false)) {
     return;
 }
 /**
@@ -127,4 +127,4 @@ abstract class ParagonIE_Sodium_Core32_HSalsa20 extends ParagonIE_Sodium_Core32_
 /**
  * Class ParagonIE_Sodium_Core32_HSalsa20
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core32_HSalsa20', 'ParagonIE_Sodium_Core32_HSalsa20', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core32_HSalsa20', 'ParagonIE_Sodium_Core32_HSalsa20', \false);

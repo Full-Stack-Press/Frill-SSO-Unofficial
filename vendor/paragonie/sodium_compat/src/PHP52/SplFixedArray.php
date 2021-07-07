@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 if (\class_exists('SplFixedArray')) {
     return;
@@ -178,4 +178,4 @@ class SplFixedArray implements \Iterator, \ArrayAccess, \Countable
  * the range as indexes. The advantage is that it allows a faster array
  * implementation.
  */
-\class_alias('frill\\sso\\SplFixedArray', 'SplFixedArray', \false);
+\class_alias('unofficial\\frill\\sso\\SplFixedArray', 'SplFixedArray', \false);

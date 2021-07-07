@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 /**
  * Libsodium compatibility layer
@@ -22,7 +22,7 @@ namespace frill\sso;
  *                                                                               *
  * CAUTION * CAUTION * CAUTION * CAUTION * CAUTION * CAUTION * CAUTION * CAUTION *
  */
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Compat', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Compat', \false)) {
     return;
 }
 class ParagonIE_Sodium_Compat
@@ -253,7 +253,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_bin2hex($string);
         }
         if (self::use_fallback('bin2hex')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\bin2hex', $string);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\bin2hex', $string);
         }
         return ParagonIE_Sodium_Core_Util::bin2hex($string);
     }
@@ -279,7 +279,7 @@ class ParagonIE_Sodium_Compat
             return (int) \sodium_compare($left, $right);
         }
         if (self::use_fallback('compare')) {
-            return (int) \call_user_func('frill\\sso\\Sodium\\compare', $left, $right);
+            return (int) \call_user_func('unofficial\\frill\\sso\\Sodium\\compare', $left, $right);
         }
         return ParagonIE_Sodium_Core_Util::compare($left, $right);
     }
@@ -297,7 +297,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_aead_aes256gcm_is_available();
         }
         if (self::use_fallback('crypto_aead_aes256gcm_is_available')) {
-            return \call_user_func('frill\\sso\\Sodium\\crypto_aead_aes256gcm_is_available');
+            return \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_aead_aes256gcm_is_available');
         }
         if (\PHP_VERSION_ID < 70100) {
             // OpenSSL doesn't support AEAD before 7.1.0
@@ -456,7 +456,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_aead_chacha20poly1305_decrypt($ciphertext, $assocData, $nonce, $key);
         }
         if (self::use_fallback('crypto_aead_chacha20poly1305_decrypt')) {
-            return \call_user_func('frill\\sso\\Sodium\\crypto_aead_chacha20poly1305_decrypt', $ciphertext, $assocData, $nonce, $key);
+            return \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_aead_chacha20poly1305_decrypt', $ciphertext, $assocData, $nonce, $key);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::aead_chacha20poly1305_decrypt($ciphertext, $assocData, $nonce, $key);
@@ -501,7 +501,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_aead_chacha20poly1305_encrypt($plaintext, $assocData, $nonce, $key);
         }
         if (self::use_fallback('crypto_aead_chacha20poly1305_encrypt')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_aead_chacha20poly1305_encrypt', $plaintext, $assocData, $nonce, $key);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_aead_chacha20poly1305_encrypt', $plaintext, $assocData, $nonce, $key);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::aead_chacha20poly1305_encrypt($plaintext, $assocData, $nonce, $key);
@@ -554,7 +554,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_aead_chacha20poly1305_ietf_decrypt($ciphertext, $assocData, $nonce, $key);
         }
         if (self::use_fallback('crypto_aead_chacha20poly1305_ietf_decrypt')) {
-            return \call_user_func('frill\\sso\\Sodium\\crypto_aead_chacha20poly1305_ietf_decrypt', $ciphertext, $assocData, $nonce, $key);
+            return \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_aead_chacha20poly1305_ietf_decrypt', $ciphertext, $assocData, $nonce, $key);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::aead_chacha20poly1305_ietf_decrypt($ciphertext, $assocData, $nonce, $key);
@@ -613,7 +613,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_aead_chacha20poly1305_ietf_encrypt($plaintext, $assocData, $nonce, $key);
         }
         if (self::use_fallback('crypto_aead_chacha20poly1305_ietf_encrypt')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_aead_chacha20poly1305_ietf_encrypt', $plaintext, $assocData, $nonce, $key);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_aead_chacha20poly1305_ietf_encrypt', $plaintext, $assocData, $nonce, $key);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::aead_chacha20poly1305_ietf_encrypt($plaintext, $assocData, $nonce, $key);
@@ -774,7 +774,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_auth($message, $key);
         }
         if (self::use_fallback('crypto_auth')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_auth', $message, $key);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_auth', $message, $key);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::auth($message, $key);
@@ -819,7 +819,7 @@ class ParagonIE_Sodium_Compat
             return (bool) \sodium_crypto_auth_verify($mac, $message, $key);
         }
         if (self::use_fallback('crypto_auth_verify')) {
-            return (bool) \call_user_func('frill\\sso\\Sodium\\crypto_auth_verify', $mac, $message, $key);
+            return (bool) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_auth_verify', $mac, $message, $key);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::auth_verify($mac, $message, $key);
@@ -860,7 +860,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_box($plaintext, $nonce, $keypair);
         }
         if (self::use_fallback('crypto_box')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_box', $plaintext, $nonce, $keypair);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_box', $plaintext, $nonce, $keypair);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::box($plaintext, $nonce, $keypair);
@@ -897,7 +897,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_box_seal($plaintext, $publicKey);
         }
         if (self::use_fallback('crypto_box_seal')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_box_seal', $plaintext, $publicKey);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_box_seal', $plaintext, $publicKey);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::box_seal($plaintext, $publicKey);
@@ -936,7 +936,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_box_seal_open($ciphertext, $keypair);
         }
         if (self::use_fallback('crypto_box_seal_open')) {
-            return \call_user_func('frill\\sso\\Sodium\\crypto_box_seal_open', $ciphertext, $keypair);
+            return \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_box_seal_open', $ciphertext, $keypair);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::box_seal_open($ciphertext, $keypair);
@@ -960,7 +960,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_box_keypair();
         }
         if (self::use_fallback('crypto_box_keypair')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_box_keypair');
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_box_keypair');
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::box_keypair();
@@ -994,7 +994,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_box_keypair_from_secretkey_and_publickey($secretKey, $publicKey);
         }
         if (self::use_fallback('crypto_box_keypair_from_secretkey_and_publickey')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_box_keypair_from_secretkey_and_publickey', $secretKey, $publicKey);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_box_keypair_from_secretkey_and_publickey', $secretKey, $publicKey);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::box_keypair_from_secretkey_and_publickey($secretKey, $publicKey);
@@ -1038,7 +1038,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_box_open($ciphertext, $nonce, $keypair);
         }
         if (self::use_fallback('crypto_box_open')) {
-            return \call_user_func('frill\\sso\\Sodium\\crypto_box_open', $ciphertext, $nonce, $keypair);
+            return \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_box_open', $ciphertext, $nonce, $keypair);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::box_open($ciphertext, $nonce, $keypair);
@@ -1066,7 +1066,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_box_publickey($keypair);
         }
         if (self::use_fallback('crypto_box_publickey')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_box_publickey', $keypair);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_box_publickey', $keypair);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::box_publickey($keypair);
@@ -1094,7 +1094,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_box_publickey_from_secretkey($secretKey);
         }
         if (self::use_fallback('crypto_box_publickey_from_secretkey')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_box_publickey_from_secretkey', $secretKey);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_box_publickey_from_secretkey', $secretKey);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::box_publickey_from_secretkey($secretKey);
@@ -1122,7 +1122,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_box_secretkey($keypair);
         }
         if (self::use_fallback('crypto_box_secretkey')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_box_secretkey', $keypair);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_box_secretkey', $keypair);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::box_secretkey($keypair);
@@ -1147,7 +1147,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_box_seed_keypair($seed);
         }
         if (self::use_fallback('crypto_box_seed_keypair')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_box_seed_keypair', $seed);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_box_seed_keypair', $seed);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::box_seed_keypair($seed);
@@ -1189,7 +1189,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_generichash($message, $key, $length);
         }
         if (self::use_fallback('crypto_generichash')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_generichash', $message, $key, $length);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_generichash', $message, $key, $length);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::generichash($message, $key, $length);
@@ -1217,7 +1217,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_generichash_final($ctx, $length);
         }
         if (self::use_fallback('crypto_generichash_final')) {
-            $func = 'frill\\sso\\Sodium\\crypto_generichash_final';
+            $func = 'unofficial\\frill\\sso\\Sodium\\crypto_generichash_final';
             return (string) $func($ctx, $length);
         }
         if ($length < 1) {
@@ -1272,7 +1272,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_generichash_init($key, $length);
         }
         if (self::use_fallback('crypto_generichash_init')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_generichash_init', $key, $length);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_generichash_init', $key, $length);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::generichash_init($key, $length);
@@ -1343,7 +1343,7 @@ class ParagonIE_Sodium_Compat
             return;
         }
         if (self::use_fallback('crypto_generichash_update')) {
-            $func = 'frill\\sso\\Sodium\\crypto_generichash_update';
+            $func = 'unofficial\\frill\\sso\\Sodium\\crypto_generichash_update';
             $func($ctx, $message);
             return;
         }
@@ -1464,7 +1464,7 @@ class ParagonIE_Sodium_Compat
             }
         }
         if (self::use_fallback('crypto_kx')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_kx', $my_secret, $their_public, $client_public, $server_public);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_kx', $my_secret, $their_public, $client_public, $server_public);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::keyExchange($my_secret, $their_public, $client_public, $server_public);
@@ -1596,7 +1596,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_pwhash($outlen, $passwd, $salt, $opslimit, $memlimit);
         }
         if (self::use_fallback('crypto_pwhash')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_pwhash', $outlen, $passwd, $salt, $opslimit, $memlimit);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_pwhash', $outlen, $passwd, $salt, $opslimit, $memlimit);
         }
         // This is the best we can do.
         throw new \SodiumException('This is not implemented, as it is not possible to implement Argon2i with acceptable performance in pure-PHP');
@@ -1637,7 +1637,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_pwhash_str($passwd, $opslimit, $memlimit);
         }
         if (self::use_fallback('crypto_pwhash_str')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_pwhash_str', $passwd, $opslimit, $memlimit);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_pwhash_str', $passwd, $opslimit, $memlimit);
         }
         // This is the best we can do.
         throw new \SodiumException('This is not implemented, as it is not possible to implement Argon2i with acceptable performance in pure-PHP');
@@ -1684,7 +1684,7 @@ class ParagonIE_Sodium_Compat
             return (bool) \sodium_crypto_pwhash_str_verify($passwd, $hash);
         }
         if (self::use_fallback('crypto_pwhash_str_verify')) {
-            return (bool) \call_user_func('frill\\sso\\Sodium\\crypto_pwhash_str_verify', $passwd, $hash);
+            return (bool) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_pwhash_str_verify', $passwd, $hash);
         }
         // This is the best we can do.
         throw new \SodiumException('This is not implemented, as it is not possible to implement Argon2i with acceptable performance in pure-PHP');
@@ -1710,7 +1710,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_pwhash_scryptsalsa208sha256((int) $outlen, (string) $passwd, (string) $salt, (int) $opslimit, (int) $memlimit);
         }
         if (self::use_fallback('crypto_pwhash_scryptsalsa208sha256')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_pwhash_scryptsalsa208sha256', (int) $outlen, (string) $passwd, (string) $salt, (int) $opslimit, (int) $memlimit);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_pwhash_scryptsalsa208sha256', (int) $outlen, (string) $passwd, (string) $salt, (int) $opslimit, (int) $memlimit);
         }
         // This is the best we can do.
         throw new \SodiumException('This is not implemented, as it is not possible to implement Scrypt with acceptable performance in pure-PHP');
@@ -1750,7 +1750,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_crypto_pwhash_scryptsalsa208sha256_str((string) $passwd, (int) $opslimit, (int) $memlimit);
         }
         if (self::use_fallback('crypto_pwhash_scryptsalsa208sha256_str')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_pwhash_scryptsalsa208sha256_str', (string) $passwd, (int) $opslimit, (int) $memlimit);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_pwhash_scryptsalsa208sha256_str', (string) $passwd, (int) $opslimit, (int) $memlimit);
         }
         // This is the best we can do.
         throw new \SodiumException('This is not implemented, as it is not possible to implement Scrypt with acceptable performance in pure-PHP');
@@ -1770,7 +1770,7 @@ class ParagonIE_Sodium_Compat
             return (bool) \sodium_crypto_pwhash_scryptsalsa208sha256_str_verify((string) $passwd, (string) $hash);
         }
         if (self::use_fallback('crypto_pwhash_scryptsalsa208sha256_str_verify')) {
-            return (bool) \call_user_func('frill\\sso\\Sodium\\crypto_pwhash_scryptsalsa208sha256_str_verify', (string) $passwd, (string) $hash);
+            return (bool) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_pwhash_scryptsalsa208sha256_str_verify', (string) $passwd, (string) $hash);
         }
         // This is the best we can do.
         throw new \SodiumException('This is not implemented, as it is not possible to implement Scrypt with acceptable performance in pure-PHP');
@@ -1804,7 +1804,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_scalarmult($secretKey, $publicKey);
         }
         if (self::use_fallback('crypto_scalarmult')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_scalarmult', $secretKey, $publicKey);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_scalarmult', $secretKey, $publicKey);
         }
         /* Output validation: Forbid all-zero keys */
         if (ParagonIE_Sodium_Core_Util::hashEquals($secretKey, \str_repeat("\x00", self::CRYPTO_BOX_SECRETKEYBYTES))) {
@@ -1840,7 +1840,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_scalarmult_base($secretKey);
         }
         if (self::use_fallback('crypto_scalarmult_base')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_scalarmult_base', $secretKey);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_scalarmult_base', $secretKey);
         }
         if (ParagonIE_Sodium_Core_Util::hashEquals($secretKey, \str_repeat("\x00", self::CRYPTO_BOX_SECRETKEYBYTES))) {
             throw new \SodiumException('Zero secret key is not allowed');
@@ -1880,7 +1880,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_secretbox($plaintext, $nonce, $key);
         }
         if (self::use_fallback('crypto_secretbox')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_secretbox', $plaintext, $nonce, $key);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_secretbox', $plaintext, $nonce, $key);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::secretbox($plaintext, $nonce, $key);
@@ -1921,7 +1921,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_secretbox_open($ciphertext, $nonce, $key);
         }
         if (self::use_fallback('crypto_secretbox_open')) {
-            return \call_user_func('frill\\sso\\Sodium\\crypto_secretbox_open', $ciphertext, $nonce, $key);
+            return \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_secretbox_open', $ciphertext, $nonce, $key);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::secretbox_open($ciphertext, $nonce, $key);
@@ -2103,7 +2103,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_shorthash($message, $key);
         }
         if (self::use_fallback('crypto_shorthash')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_shorthash', $message, $key);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_shorthash', $message, $key);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Core32_SipHash::sipHash24($message, $key);
@@ -2149,7 +2149,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_sign($message, $secretKey);
         }
         if (self::use_fallback('crypto_sign')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_sign', $message, $secretKey);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_sign', $message, $secretKey);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::sign($message, $secretKey);
@@ -2189,7 +2189,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_sign_open($signedMessage, $publicKey);
         }
         if (self::use_fallback('crypto_sign_open')) {
-            return \call_user_func('frill\\sso\\Sodium\\crypto_sign_open', $signedMessage, $publicKey);
+            return \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_sign_open', $signedMessage, $publicKey);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::sign_open($signedMessage, $publicKey);
@@ -2209,7 +2209,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_sign_keypair();
         }
         if (self::use_fallback('crypto_sign_keypair')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_sign_keypair');
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_sign_keypair');
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Core32_Ed25519::keypair();
@@ -2255,7 +2255,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_sign_seed_keypair($seed);
         }
         if (self::use_fallback('crypto_sign_keypair')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_sign_seed_keypair', $seed);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_sign_seed_keypair', $seed);
         }
         $publicKey = '';
         $secretKey = '';
@@ -2287,7 +2287,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_sign_publickey($keypair);
         }
         if (self::use_fallback('crypto_sign_publickey')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_sign_publickey', $keypair);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_sign_publickey', $keypair);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Core32_Ed25519::publickey($keypair);
@@ -2315,7 +2315,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_sign_publickey_from_secretkey($secretKey);
         }
         if (self::use_fallback('crypto_sign_publickey_from_secretkey')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_sign_publickey_from_secretkey', $secretKey);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_sign_publickey_from_secretkey', $secretKey);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Core32_Ed25519::publickey_from_secretkey($secretKey);
@@ -2343,7 +2343,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_sign_secretkey($keypair);
         }
         if (self::use_fallback('crypto_sign_secretkey')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_sign_secretkey', $keypair);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_sign_secretkey', $keypair);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Core32_Ed25519::secretkey($keypair);
@@ -2375,7 +2375,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_sign_detached($message, $secretKey);
         }
         if (self::use_fallback('crypto_sign_detached')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_sign_detached', $message, $secretKey);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_sign_detached', $message, $secretKey);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::sign_detached($message, $secretKey);
@@ -2411,7 +2411,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_sign_verify_detached($signature, $message, $publicKey);
         }
         if (self::use_fallback('crypto_sign_verify_detached')) {
-            return (bool) \call_user_func('frill\\sso\\Sodium\\crypto_sign_verify_detached', $signature, $message, $publicKey);
+            return (bool) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_sign_verify_detached', $signature, $message, $publicKey);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Crypto32::sign_verify_detached($signature, $message, $publicKey);
@@ -2441,7 +2441,7 @@ class ParagonIE_Sodium_Compat
             }
         }
         if (self::use_fallback('crypto_sign_ed25519_pk_to_curve25519')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_sign_ed25519_pk_to_curve25519', $pk);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_sign_ed25519_pk_to_curve25519', $pk);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Core32_Ed25519::pk_to_curve25519($pk);
@@ -2471,7 +2471,7 @@ class ParagonIE_Sodium_Compat
             }
         }
         if (self::use_fallback('crypto_sign_ed25519_sk_to_curve25519')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_sign_ed25519_sk_to_curve25519', $sk);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_sign_ed25519_sk_to_curve25519', $sk);
         }
         $h = \hash('sha512', ParagonIE_Sodium_Core_Util::substr($sk, 0, 32), \true);
         $h[0] = ParagonIE_Sodium_Core_Util::intToChr(ParagonIE_Sodium_Core_Util::chrToInt($h[0]) & 248);
@@ -2509,7 +2509,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_stream($len, $nonce, $key);
         }
         if (self::use_fallback('crypto_stream')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_stream', $len, $nonce, $key);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_stream', $len, $nonce, $key);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Core32_XSalsa20::xsalsa20($len, $nonce, $key);
@@ -2553,7 +2553,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_crypto_stream_xor($message, $nonce, $key);
         }
         if (self::use_fallback('crypto_stream_xor')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\crypto_stream_xor', $message, $nonce, $key);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\crypto_stream_xor', $message, $nonce, $key);
         }
         if (\PHP_INT_SIZE === 4) {
             return ParagonIE_Sodium_Core32_XSalsa20::xsalsa20_xor($message, $nonce, $key);
@@ -2680,7 +2680,7 @@ class ParagonIE_Sodium_Compat
             }
         }
         if (self::use_fallback('hex2bin')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\hex2bin', $string);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\hex2bin', $string);
         }
         return ParagonIE_Sodium_Core_Util::hex2bin($string);
     }
@@ -2703,7 +2703,7 @@ class ParagonIE_Sodium_Compat
             return;
         }
         if (self::use_fallback('increment')) {
-            $func = 'frill\\sso\\Sodium\\increment';
+            $func = 'unofficial\\frill\\sso\\Sodium\\increment';
             $func($var);
             return;
         }
@@ -2744,7 +2744,7 @@ class ParagonIE_Sodium_Compat
         }
         if (self::use_fallback('library_version_major')) {
             /** @psalm-suppress UndefinedFunction */
-            return (int) \call_user_func('frill\\sso\\Sodium\\library_version_major');
+            return (int) \call_user_func('unofficial\\frill\\sso\\Sodium\\library_version_major');
         }
         return self::LIBRARY_VERSION_MAJOR;
     }
@@ -2761,7 +2761,7 @@ class ParagonIE_Sodium_Compat
         }
         if (self::use_fallback('library_version_minor')) {
             /** @psalm-suppress UndefinedFunction */
-            return (int) \call_user_func('frill\\sso\\Sodium\\library_version_minor');
+            return (int) \call_user_func('unofficial\\frill\\sso\\Sodium\\library_version_minor');
         }
         return self::LIBRARY_VERSION_MINOR;
     }
@@ -2784,7 +2784,7 @@ class ParagonIE_Sodium_Compat
             return \sodium_memcmp($left, $right);
         }
         if (self::use_fallback('memcmp')) {
-            return (int) \call_user_func('frill\\sso\\Sodium\\memcmp', $left, $right);
+            return (int) \call_user_func('unofficial\\frill\\sso\\Sodium\\memcmp', $left, $right);
         }
         /** @var string $left */
         /** @var string $right */
@@ -2812,7 +2812,7 @@ class ParagonIE_Sodium_Compat
             return;
         }
         if (self::use_fallback('memzero')) {
-            $func = 'frill\\sso\\Sodium\\memzero';
+            $func = 'unofficial\\frill\\sso\\Sodium\\memzero';
             $func($var);
             if ($var === null) {
                 return;
@@ -2969,7 +2969,7 @@ class ParagonIE_Sodium_Compat
             }
         }
         if (self::use_fallback('randombytes_buf')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\randombytes_buf', $numBytes);
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\randombytes_buf', $numBytes);
         }
         return \random_bytes($numBytes);
     }
@@ -2993,7 +2993,7 @@ class ParagonIE_Sodium_Compat
             }
         }
         if (self::use_fallback('randombytes_uniform')) {
-            return (int) \call_user_func('frill\\sso\\Sodium\\randombytes_uniform', $range);
+            return (int) \call_user_func('unofficial\\frill\\sso\\Sodium\\randombytes_uniform', $range);
         }
         return \random_int(0, $range - 1);
     }
@@ -3008,7 +3008,7 @@ class ParagonIE_Sodium_Compat
     public static function randombytes_random16()
     {
         if (self::use_fallback('randombytes_random16')) {
-            return (int) \call_user_func('frill\\sso\\Sodium\\randombytes_random16');
+            return (int) \call_user_func('unofficial\\frill\\sso\\Sodium\\randombytes_random16');
         }
         return \random_int(0, 65535);
     }
@@ -3300,7 +3300,7 @@ class ParagonIE_Sodium_Compat
             return (string) \sodium_version_string();
         }
         if (self::use_fallback('version_string')) {
-            return (string) \call_user_func('frill\\sso\\Sodium\\version_string');
+            return (string) \call_user_func('unofficial\\frill\\sso\\Sodium\\version_string');
         }
         return (string) self::VERSION_STRING;
     }
@@ -3355,4 +3355,4 @@ class ParagonIE_Sodium_Compat
         return (bool) $res;
     }
 }
-\class_alias('frill\\sso\\ParagonIE_Sodium_Compat', 'ParagonIE_Sodium_Compat', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Compat', 'ParagonIE_Sodium_Compat', \false);

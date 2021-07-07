@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 require_once \dirname(\dirname(__FILE__)) . '/autoload.php';
 /**

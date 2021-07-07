@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core_Ed25519', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Ed25519', \false)) {
     return;
 }
 /**
@@ -409,4 +409,4 @@ abstract class ParagonIE_Sodium_Core_Ed25519 extends ParagonIE_Sodium_Core_Curve
 /**
  * Class ParagonIE_Sodium_Core_Ed25519
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_Ed25519', 'ParagonIE_Sodium_Core_Ed25519', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Ed25519', 'ParagonIE_Sodium_Core_Ed25519', \false);

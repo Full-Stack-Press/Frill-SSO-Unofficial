@@ -6,7 +6,7 @@
  * Date: 25.03.16
  * Time: 20:55
  */
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
 class YawikInstaller extends BaseInstaller
 {
@@ -19,7 +19,7 @@ class YawikInstaller extends BaseInstaller
      */
     public function inflectPackageVars($vars)
     {
-        $vars['name'] = \strtolower(\preg_replace('/(?<=\\w)([A-Z])/', 'frill\\sso\\_\\1', $vars['name']));
+        $vars['name'] = \strtolower(\preg_replace('/(?<=\\w)([A-Z])/', 'unofficial\\frill\\sso\\_\\1', $vars['name']));
         $vars['name'] = \str_replace(array('-', '_'), ' ', $vars['name']);
         $vars['name'] = \str_replace(' ', '', \ucwords($vars['name']));
         return $vars;

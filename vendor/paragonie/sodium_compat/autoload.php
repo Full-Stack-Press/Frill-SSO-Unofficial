@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 if (\PHP_VERSION_ID < 70000) {
     if (!\is_callable('sodiumCompatAutoloader')) {
@@ -57,12 +57,12 @@ if (\PHP_VERSION_ID < 70200 || !\extension_loaded('sodium')) {
         require_once \dirname(__FILE__) . '/lib/php72compat_const.php';
     }
     if (\PHP_VERSION_ID >= 70000) {
-        \assert(\class_exists('frill\\sso\\ParagonIE_Sodium_Compat'), 'Possible filesystem/autoloader bug?');
+        \assert(\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Compat'), 'Possible filesystem/autoloader bug?');
     } else {
-        \assert(\class_exists('frill\\sso\\ParagonIE_Sodium_Compat'));
+        \assert(\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Compat'));
     }
     require_once \dirname(__FILE__) . '/lib/php72compat.php';
-} elseif (!\function_exists('frill\\sso\\sodium_crypto_stream_xchacha20_xor')) {
+} elseif (!\function_exists('unofficial\\frill\\sso\\sodium_crypto_stream_xchacha20_xor')) {
     // Older versions of {PHP, ext/sodium} will not define these
     require_once \dirname(__FILE__) . '/lib/php72compat.php';
 }

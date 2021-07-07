@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core_Curve25519_Fe', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Curve25519_Fe', \false)) {
     return;
 }
 /**
@@ -119,4 +119,4 @@ class ParagonIE_Sodium_Core_Curve25519_Fe implements \ArrayAccess
  *
  * This represents a Field Element
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_Curve25519_Fe', 'ParagonIE_Sodium_Core_Curve25519_Fe', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Curve25519_Fe', 'ParagonIE_Sodium_Core_Curve25519_Fe', \false);

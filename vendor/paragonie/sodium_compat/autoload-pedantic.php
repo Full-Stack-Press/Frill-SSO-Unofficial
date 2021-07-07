@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 require_once 'autoload.php';
 \define('DO_PEDANTIC_TEST', \true);

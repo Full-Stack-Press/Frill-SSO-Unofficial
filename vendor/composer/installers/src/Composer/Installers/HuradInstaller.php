@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
 class HuradInstaller extends BaseInstaller
 {
@@ -12,7 +12,7 @@ class HuradInstaller extends BaseInstaller
     {
         $nameParts = \explode('/', $vars['name']);
         foreach ($nameParts as &$value) {
-            $value = \strtolower(\preg_replace('/(?<=\\w)([A-Z])/', 'frill\\sso\\_\\1', $value));
+            $value = \strtolower(\preg_replace('/(?<=\\w)([A-Z])/', 'unofficial\\frill\\sso\\_\\1', $value));
             $value = \str_replace(array('-', '_'), ' ', $value);
             $value = \str_replace(' ', '', \ucwords($value));
         }

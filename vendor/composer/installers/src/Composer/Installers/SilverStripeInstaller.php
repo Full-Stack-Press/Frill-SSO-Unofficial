@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
-use frill\sso\Composer\Package\PackageInterface;
+use unofficial\frill\sso\Composer\Package\PackageInterface;
 class SilverStripeInstaller extends BaseInstaller
 {
     protected $locations = array('module' => '{$name}/', 'theme' => 'themes/{$name}/');

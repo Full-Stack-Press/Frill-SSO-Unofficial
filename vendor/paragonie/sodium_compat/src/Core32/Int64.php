@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 /**
  * Class ParagonIE_Sodium_Core32_Int64
@@ -857,4 +857,4 @@ class ParagonIE_Sodium_Core32_Int64
  *
  * These are immutable. It always returns a new instance.
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core32_Int64', 'ParagonIE_Sodium_Core32_Int64', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core32_Int64', 'ParagonIE_Sodium_Core32_Int64', \false);

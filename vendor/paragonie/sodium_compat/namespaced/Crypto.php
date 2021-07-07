@@ -1,7 +1,7 @@
 <?php
 
-namespace frill\sso\ParagonIE\Sodium;
+namespace unofficial\frill\sso\ParagonIE\Sodium;
 
-class Crypto extends \frill\sso\ParagonIE_Sodium_Crypto
+class Crypto extends \unofficial\frill\sso\ParagonIE_Sodium_Crypto
 {
 }

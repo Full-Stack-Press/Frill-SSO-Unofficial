@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 require 'Token.php';
 class RedirectHandler
@@ -60,4 +60,4 @@ class RedirectHandler
         }
     }
 }
-\class_alias('frill\\sso\\RedirectHandler', 'RedirectHandler', \false);
+\class_alias('unofficial\\frill\\sso\\RedirectHandler', 'RedirectHandler', \false);

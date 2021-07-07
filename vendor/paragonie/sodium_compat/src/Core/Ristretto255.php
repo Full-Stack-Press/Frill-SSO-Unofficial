@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 /**
  * Class ParagonIE_Sodium_Core_Ristretto255
@@ -601,4 +601,4 @@ class ParagonIE_Sodium_Core_Ristretto255 extends ParagonIE_Sodium_Core_Ed25519
 /**
  * Class ParagonIE_Sodium_Core_Ristretto255
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_Ristretto255', 'ParagonIE_Sodium_Core_Ristretto255', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Ristretto255', 'ParagonIE_Sodium_Core_Ristretto255', \false);

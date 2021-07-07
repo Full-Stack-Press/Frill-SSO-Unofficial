@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
-use frill\sso\Composer\Util\Filesystem;
+use unofficial\frill\sso\Composer\Util\Filesystem;
 /**
  * Installer for Bitrix Framework. Supported types of extensions:
  * - `bitrix-d7-module` — copy the module to directory `bitrix/modules/<vendor>.<name>`.

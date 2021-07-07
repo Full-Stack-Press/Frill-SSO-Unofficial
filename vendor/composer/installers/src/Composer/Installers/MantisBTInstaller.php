@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
-use frill\sso\Composer\DependencyResolver\Pool;
+use unofficial\frill\sso\Composer\DependencyResolver\Pool;
 class MantisBTInstaller extends BaseInstaller
 {
     protected $locations = array('plugin' => 'plugins/{$name}/');
@@ -11,7 +11,7 @@ class MantisBTInstaller extends BaseInstaller
      */
     public function inflectPackageVars($vars)
     {
-        $vars['name'] = \strtolower(\preg_replace('/(?<=\\w)([A-Z])/', 'frill\\sso\\_\\1', $vars['name']));
+        $vars['name'] = \strtolower(\preg_replace('/(?<=\\w)([A-Z])/', 'unofficial\\frill\\sso\\_\\1', $vars['name']));
         $vars['name'] = \str_replace(array('-', '_'), ' ', $vars['name']);
         $vars['name'] = \str_replace(' ', '', \ucwords($vars['name']));
         return $vars;

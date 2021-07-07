@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 require_once 'lib/byte_safe_strings.php';
 require_once 'lib/cast_to_int.php';

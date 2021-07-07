@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core_BLAKE2b', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_BLAKE2b', \false)) {
     return;
 }
 /**
@@ -659,4 +659,4 @@ abstract class ParagonIE_Sodium_Core_BLAKE2b extends ParagonIE_Sodium_Core_Util
  *
  * Based on the work of Devi Mandiri in devi/salt.
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_BLAKE2b', 'ParagonIE_Sodium_Core_BLAKE2b', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_BLAKE2b', 'ParagonIE_Sodium_Core_BLAKE2b', \false);
