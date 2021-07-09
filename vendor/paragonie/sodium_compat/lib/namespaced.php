@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 require_once \dirname(\dirname(__FILE__)) . '/autoload.php';
 if (\PHP_VERSION_ID < 50300) {
@@ -24,7 +24,7 @@ if (\PHP_VERSION_ID < 50300) {
     if ($class[0] === '\\') {
         $class = \substr($class, 1);
     }
-    $namespace = 'frill\\sso\\ParagonIE\\Sodium';
+    $namespace = 'unofficial\\frill\\sso\\ParagonIE\\Sodium';
     // Does the class use the namespace prefix?
     $len = \strlen($namespace);
     if (\strncmp($namespace, $class, $len) !== 0) {

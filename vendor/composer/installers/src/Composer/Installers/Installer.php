@@ -1,15 +1,15 @@
 <?php
 
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
-use frill\sso\Composer\Composer;
-use frill\sso\Composer\Installer\BinaryInstaller;
-use frill\sso\Composer\Installer\LibraryInstaller;
-use frill\sso\Composer\IO\IOInterface;
-use frill\sso\Composer\Package\PackageInterface;
-use frill\sso\Composer\Repository\InstalledRepositoryInterface;
-use frill\sso\Composer\Util\Filesystem;
-use frill\sso\React\Promise\PromiseInterface;
+use unofficial\frill\sso\Composer\Composer;
+use unofficial\frill\sso\Composer\Installer\BinaryInstaller;
+use unofficial\frill\sso\Composer\Installer\LibraryInstaller;
+use unofficial\frill\sso\Composer\IO\IOInterface;
+use unofficial\frill\sso\Composer\Package\PackageInterface;
+use unofficial\frill\sso\Composer\Repository\InstalledRepositoryInterface;
+use unofficial\frill\sso\Composer\Util\Filesystem;
+use unofficial\frill\sso\React\Promise\PromiseInterface;
 class Installer extends LibraryInstaller
 {
     /**

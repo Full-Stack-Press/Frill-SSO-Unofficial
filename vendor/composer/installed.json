@@ -41,7 +41,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "frill\\sso\\Composer\\Installers\\": "src\/Composer\/Installers"
+                    "unofficial\\frill\\sso\\Composer\\Installers\\": "src\/Composer\/Installers"
                 }
             },
             "notification-url": "https:\/\/packagist.org\/downloads\/",
@@ -182,7 +182,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "frill\\sso\\Firebase\\JWT\\": "src"
+                    "unofficial\\frill\\sso\\Firebase\\JWT\\": "src"
                 }
             },
             "notification-url": "https:\/\/packagist.org\/downloads\/",

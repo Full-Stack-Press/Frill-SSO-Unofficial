@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 if (!\class_exists('SodiumException', \false)) {
     /**

@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core_Poly1305_State', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Poly1305_State', \false)) {
     return;
 }
 /**
@@ -337,4 +337,4 @@ class ParagonIE_Sodium_Core_Poly1305_State extends ParagonIE_Sodium_Core_Util
 /**
  * Class ParagonIE_Sodium_Core_Poly1305_State
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_Poly1305_State', 'ParagonIE_Sodium_Core_Poly1305_State', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Poly1305_State', 'ParagonIE_Sodium_Core_Poly1305_State', \false);

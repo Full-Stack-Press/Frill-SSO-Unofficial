@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
 /**
  * Composer installer for 3rd party Tusk utilities

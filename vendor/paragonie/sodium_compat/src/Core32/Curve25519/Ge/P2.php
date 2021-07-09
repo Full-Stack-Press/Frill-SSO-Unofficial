@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core32_Curve25519_Ge_P2', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core32_Curve25519_Ge_P2', \false)) {
     return;
 }
 /**
@@ -50,4 +50,4 @@ class ParagonIE_Sodium_Core32_Curve25519_Ge_P2
 /**
  * Class ParagonIE_Sodium_Core32_Curve25519_Ge_P2
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core32_Curve25519_Ge_P2', 'ParagonIE_Sodium_Core32_Curve25519_Ge_P2', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core32_Curve25519_Ge_P2', 'ParagonIE_Sodium_Core32_Curve25519_Ge_P2', \false);

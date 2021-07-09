@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 if (!\defined('SODIUM_CRYPTO_CORE_RISTRETTO255_BYTES')) {
     \define('SODIUM_CRYPTO_CORE_RISTRETTO255_BYTES', ParagonIE_Sodium_Compat::CRYPTO_CORE_RISTRETTO255_BYTES);

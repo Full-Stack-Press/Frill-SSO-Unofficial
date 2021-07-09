@@ -1,9 +1,9 @@
 <?php
 
-namespace frill\sso\Sodium;
+namespace unofficial\frill\sso\Sodium;
 
 require_once \dirname(\dirname(__FILE__)) . '/autoload.php';
-use frill\sso\ParagonIE_Sodium_Compat;
+use unofficial\frill\sso\ParagonIE_Sodium_Compat;
 const CRYPTO_AEAD_AES256GCM_KEYBYTES = ParagonIE_Sodium_Compat::CRYPTO_AEAD_AES256GCM_KEYBYTES;
 const CRYPTO_AEAD_AES256GCM_NSECBYTES = ParagonIE_Sodium_Compat::CRYPTO_AEAD_AES256GCM_NSECBYTES;
 const CRYPTO_AEAD_AES256GCM_NPUBBYTES = ParagonIE_Sodium_Compat::CRYPTO_AEAD_AES256GCM_NPUBBYTES;

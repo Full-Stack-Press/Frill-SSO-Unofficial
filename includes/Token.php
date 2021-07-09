@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-use frill\sso\Firebase\JWT\JWT;
+use unofficial\frill\sso\Firebase\JWT\JWT;
 class Token
 {
     /**
@@ -16,4 +16,4 @@ class Token
         return JWT::encode($userData, $key, 'HS256');
     }
 }
-\class_alias('frill\\sso\\Token', 'Token', \false);
+\class_alias('unofficial\\frill\\sso\\Token', 'Token', \false);

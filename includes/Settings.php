@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 class Settings
 {
@@ -75,4 +75,4 @@ class Settings
 		<?php 
     }
 }
-\class_alias('frill\\sso\\Settings', 'Settings', \false);
+\class_alias('unofficial\\frill\\sso\\Settings', 'Settings', \false);

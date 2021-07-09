@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'frill\\sso\\Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
-    'frill\\sso\\Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
+    'unofficial\\frill\\sso\\Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
+    'unofficial\\frill\\sso\\Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
 );

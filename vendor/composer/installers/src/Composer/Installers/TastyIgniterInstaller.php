@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
 class TastyIgniterInstaller extends BaseInstaller
 {

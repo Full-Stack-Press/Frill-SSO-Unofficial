@@ -1,7 +1,7 @@
 <?php
 
-namespace frill\sso\ParagonIE\Sodium;
+namespace unofficial\frill\sso\ParagonIE\Sodium;
 
-class Compat extends \frill\sso\ParagonIE_Sodium_Compat
+class Compat extends \unofficial\frill\sso\ParagonIE_Sodium_Compat
 {
 }

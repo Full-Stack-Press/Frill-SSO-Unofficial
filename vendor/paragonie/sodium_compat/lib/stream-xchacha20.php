@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 if (!\is_callable('sodium_crypto_stream_xchacha20')) {
     /**

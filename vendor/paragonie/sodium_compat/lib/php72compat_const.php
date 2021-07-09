@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 const SODIUM_LIBRARY_MAJOR_VERSION = 9;
 const SODIUM_LIBRARY_MINOR_VERSION = 1;

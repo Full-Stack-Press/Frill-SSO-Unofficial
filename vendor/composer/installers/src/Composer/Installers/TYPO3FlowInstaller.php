@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
 /**
  * An installer to handle TYPO3 Flow specifics when installing packages.

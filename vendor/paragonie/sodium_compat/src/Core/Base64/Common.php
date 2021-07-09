@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 /**
  * Class ParagonIE_Sodium_Core_Base64
@@ -186,4 +186,4 @@ abstract class ParagonIE_Sodium_Core_Base64_Common
  * doesn't support late static binding, and we have no better workaround
  * available that won't break PHP 7+. Therefore, we're forced to duplicate code.
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_Base64_Common', 'ParagonIE_Sodium_Core_Base64_Common', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Base64_Common', 'ParagonIE_Sodium_Core_Base64_Common', \false);

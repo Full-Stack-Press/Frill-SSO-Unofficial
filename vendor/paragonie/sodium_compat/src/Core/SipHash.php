@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core_SipHash', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_SipHash', \false)) {
     return;
 }
 /**
@@ -247,4 +247,4 @@ class ParagonIE_Sodium_Core_SipHash extends ParagonIE_Sodium_Core_Util
  *
  * Only uses 32-bit arithmetic, while the original SipHash used 64-bit integers
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_SipHash', 'ParagonIE_Sodium_Core_SipHash', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_SipHash', 'ParagonIE_Sodium_Core_SipHash', \false);

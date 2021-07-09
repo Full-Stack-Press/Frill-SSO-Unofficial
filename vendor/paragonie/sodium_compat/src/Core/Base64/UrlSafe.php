@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 /**
  * Class ParagonIE_Sodium_Core_Base64UrlSafe
@@ -206,4 +206,4 @@ class ParagonIE_Sodium_Core_Base64_UrlSafe
  *  Copyright (c) 2016 - 2018 Paragon Initiative Enterprises.
  *  Copyright (c) 2014 Steve "Sc00bz" Thomas (steve at tobtu dot com)
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_Base64_UrlSafe', 'ParagonIE_Sodium_Core_Base64_UrlSafe', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Base64_UrlSafe', 'ParagonIE_Sodium_Core_Base64_UrlSafe', \false);

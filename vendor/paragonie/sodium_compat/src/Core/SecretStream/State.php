@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
 /**
  * Class ParagonIE_Sodium_Core_SecretStream_State
@@ -130,4 +130,4 @@ class ParagonIE_Sodium_Core_SecretStream_State
 /**
  * Class ParagonIE_Sodium_Core_SecretStream_State
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_SecretStream_State', 'ParagonIE_Sodium_Core_SecretStream_State', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_SecretStream_State', 'ParagonIE_Sodium_Core_SecretStream_State', \false);

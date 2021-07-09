@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Crypto32', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Crypto32', \false)) {
     return;
 }
 /**
@@ -1207,4 +1207,4 @@ abstract class ParagonIE_Sodium_Crypto32
  * If you are using this library, you should be using
  * ParagonIE_Sodium_Compat in your code, not this class.
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Crypto32', 'ParagonIE_Sodium_Crypto32', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Crypto32', 'ParagonIE_Sodium_Crypto32', \false);

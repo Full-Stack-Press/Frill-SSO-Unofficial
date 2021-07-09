@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core_Curve25519_H', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Curve25519_H', \false)) {
     return;
 }
 /**
@@ -80,4 +80,4 @@ class ParagonIE_Sodium_Core_Curve25519_H extends ParagonIE_Sodium_Core_Util
  *
  * This just contains the constants in the ref10/base.h file
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_Curve25519_H', 'ParagonIE_Sodium_Core_Curve25519_H', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Curve25519_H', 'ParagonIE_Sodium_Core_Curve25519_H', \false);

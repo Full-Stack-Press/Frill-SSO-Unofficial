@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core_ChaCha20_IetfCtx', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_ChaCha20_IetfCtx', \false)) {
     return;
 }
 /**
@@ -40,4 +40,4 @@ class ParagonIE_Sodium_Core32_ChaCha20_IetfCtx extends ParagonIE_Sodium_Core32_C
 /**
  * Class ParagonIE_Sodium_Core32_ChaCha20_IetfCtx
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core32_ChaCha20_IetfCtx', 'ParagonIE_Sodium_Core32_ChaCha20_IetfCtx', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core32_ChaCha20_IetfCtx', 'ParagonIE_Sodium_Core32_ChaCha20_IetfCtx', \false);

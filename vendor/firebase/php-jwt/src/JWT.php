@@ -1,6 +1,6 @@
 <?php
 
-namespace frill\sso\Firebase\JWT;
+namespace unofficial\frill\sso\Firebase\JWT;
 
 use DomainException;
 use Exception;

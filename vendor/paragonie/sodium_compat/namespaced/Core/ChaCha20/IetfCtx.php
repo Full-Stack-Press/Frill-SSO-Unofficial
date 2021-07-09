@@ -1,7 +1,7 @@
 <?php
 
-namespace frill\sso\ParagonIE\Sodium\Core\ChaCha20;
+namespace unofficial\frill\sso\ParagonIE\Sodium\Core\ChaCha20;
 
-class IetfCtx extends \frill\sso\ParagonIE_Sodium_Core_ChaCha20_IetfCtx
+class IetfCtx extends \unofficial\frill\sso\ParagonIE_Sodium_Core_ChaCha20_IetfCtx
 {
 }

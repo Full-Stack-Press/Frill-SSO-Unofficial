@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_File', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_File', \false)) {
     return;
 }
 /**
@@ -1226,4 +1226,4 @@ class ParagonIE_Sodium_File extends ParagonIE_Sodium_Core_Util
 /**
  * Class ParagonIE_Sodium_File
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_File', 'ParagonIE_Sodium_File', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_File', 'ParagonIE_Sodium_File', \false);

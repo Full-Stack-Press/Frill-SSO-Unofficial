@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso;
+namespace unofficial\frill\sso;
 
-if (\class_exists('frill\\sso\\ParagonIE_Sodium_Core_Curve25519_Ge_Cached', \false)) {
+if (\class_exists('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Curve25519_Ge_Cached', \false)) {
     return;
 }
 /**
@@ -59,4 +59,4 @@ class ParagonIE_Sodium_Core_Curve25519_Ge_Cached
 /**
  * Class ParagonIE_Sodium_Core_Curve25519_Ge_Cached
  */
-\class_alias('frill\\sso\\ParagonIE_Sodium_Core_Curve25519_Ge_Cached', 'ParagonIE_Sodium_Core_Curve25519_Ge_Cached', \false);
+\class_alias('unofficial\\frill\\sso\\ParagonIE_Sodium_Core_Curve25519_Ge_Cached', 'ParagonIE_Sodium_Core_Curve25519_Ge_Cached', \false);

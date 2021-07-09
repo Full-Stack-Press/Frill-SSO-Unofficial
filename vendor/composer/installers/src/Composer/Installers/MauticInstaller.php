@@ -1,8 +1,8 @@
 <?php
 
-namespace frill\sso\Composer\Installers;
+namespace unofficial\frill\sso\Composer\Installers;
 
-use frill\sso\Composer\Package\PackageInterface;
+use unofficial\frill\sso\Composer\Package\PackageInterface;
 class MauticInstaller extends BaseInstaller
 {
     protected $locations = array('plugin' => 'plugins/{$name}/', 'theme' => 'themes/{$name}/', 'core' => 'app/');
