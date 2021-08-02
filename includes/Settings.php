@@ -21,7 +21,7 @@ class Settings
         ?>
 		<div class="wrap">
 			<h2><?php 
-        _e('Frill SSO settings', 'frill-sso');
+        _e('Frill SSO settings', 'unofficial-frill-sso');
         ?></h2>
 			<form action="options.php" method="post">
 				<?php 
@@ -47,7 +47,7 @@ class Settings
     }
     public function frill_sso_section_text()
     {
-        echo '<p>' . __('Enter the credentials found on your frill settings page', 'frill-sso') . '</p>';
+        echo '<p>' . __('Enter the credentials found on your frill settings page', 'unofficial-frill-sso') . '</p>';
     }
     public function frill_sso_key_callback()
     {

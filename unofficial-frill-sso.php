@@ -2,11 +2,11 @@
 
 /**
  * Plugin Name:     Unofficial Frill SSO
- * Plugin URI:      https://gitlab.com/fullstackpress/frill-sso/-/releases
+ * Plugin URI:      https://github.com/Full-Stack-Press/Frill-SSO-Unofficial
  * Description:     Unofficial Frill.co SSO plugin, enable SSO (Single-sign-on) login from WordPress to Frill.co
  * Author:          Full Stack Press
  * Author URI:      https://gitlab.com/fullstackpress
- * Text Domain:     frill-sso
+ * Text Domain:     unofficial-frill-sso
  * Version:         1.0.2
  *
  */
