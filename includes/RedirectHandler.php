@@ -37,14 +37,14 @@ class RedirectHandler
         if (!isset($options['key']) || !isset($options['url'])) {
             return;
         }
-        $token = Token::createToken($options['key']);
-        $url = $options['url'] . '?ssoToken=' . $token;
+        $token = Token::createToken(esc_attr($options['key']));
+        $url = esc_url($options['url'] . '?ssoToken=' . $token);
         \header('Location:' . $url);
         die;
     }
     private function redirect_on_SSO()
     {
-        $redirect = $_REQUEST['redirect'];
+        $redirect = esc_url($_REQUEST['redirect']);
         if (!$redirect) {
             return;
         }
@@ -53,8 +53,8 @@ class RedirectHandler
             return;
         }
         if (\strpos($redirect, $options['url']) !== \false) {
-            $token = Token::createToken($options['key']);
-            $url = $redirect . '?ssoToken=' . $token;
+            $token = Token::createToken(esc_attr($options['key']));
+            $url = esc_url($redirect . '?ssoToken=' . $token);
             \header('Location:' . $url);
             die;
         }

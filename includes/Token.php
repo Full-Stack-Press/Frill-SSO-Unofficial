@@ -12,7 +12,7 @@ class Token
     public static function createToken(string $key) : string
     {
         $user = wp_get_current_user();
-        $userData = ['email' => $user->user_email, 'id' => $user->ID, 'name' => $user->display_name];
+        $userData = ['email' => sanitize_email($user->user_email), 'id' => $user->ID, 'name' => sanitize_user($user->display_name)];
         return JWT::encode($userData, $key, 'HS256');
     }
 }

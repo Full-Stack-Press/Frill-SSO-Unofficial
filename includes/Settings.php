@@ -52,16 +52,16 @@ class Settings
     public function frill_sso_key_callback()
     {
         $options = get_option('frill_sso_settings');
-        $value = '&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226&#8226';
+        $value = $options['key'];
         $placeholder = $value;
         if (!isset($options['key']) || !$options['key']) {
             $value = '';
         }
         ?>
-			<input id="frill_sso_settings_key" name="frill_sso_settings[key]" type="text" value="<?php 
-        echo $value;
+			<input id="frill_sso_settings_key" name="frill_sso_settings[key]" type="password" value="<?php 
+        echo esc_attr($value);
         ?>" placeholder="<?php 
-        echo $placeholder;
+        echo esc_attr($placeholder);
         ?>" required/>
 		<?php 
     }
@@ -70,7 +70,7 @@ class Settings
         $options = get_option('frill_sso_settings');
         ?>
 		<input id="frill_sso_settings_key" name="frill_sso_settings[url]" type="url" value="<?php 
-        echo esc_attr($options['url']);
+        echo esc_url($options['url']);
         ?>" placeholder="https://example.frill.co" "/>
 		<?php 
     }

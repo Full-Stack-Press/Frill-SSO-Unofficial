@@ -226,6 +226,16 @@ if (!function_exists('get_option')) {
         return \unofficial\frill\sso\get_option(...func_get_args());
     }
 }
+if (!function_exists('esc_attr')) {
+    function esc_attr() {
+        return \unofficial\frill\sso\esc_attr(...func_get_args());
+    }
+}
+if (!function_exists('esc_url')) {
+    function esc_url() {
+        return \unofficial\frill\sso\esc_url(...func_get_args());
+    }
+}
 if (!function_exists('add_options_page')) {
     function add_options_page() {
         return \unofficial\frill\sso\add_options_page(...func_get_args());
@@ -276,14 +286,19 @@ if (!function_exists('__')) {
         return \unofficial\frill\sso\__(...func_get_args());
     }
 }
-if (!function_exists('esc_attr')) {
-    function esc_attr() {
-        return \unofficial\frill\sso\esc_attr(...func_get_args());
-    }
-}
 if (!function_exists('wp_get_current_user')) {
     function wp_get_current_user() {
         return \unofficial\frill\sso\wp_get_current_user(...func_get_args());
+    }
+}
+if (!function_exists('sanitize_email')) {
+    function sanitize_email() {
+        return \unofficial\frill\sso\sanitize_email(...func_get_args());
+    }
+}
+if (!function_exists('sanitize_user')) {
+    function sanitize_user() {
+        return \unofficial\frill\sso\sanitize_user(...func_get_args());
     }
 }
 if (!function_exists('composerRequire9ae51db2047537785c02dcff882db51d')) {

@@ -2,9 +2,9 @@
 Contributors: zarex, afknet, jessetuttle, reesebess, fullstackpress, fullstackology
 Tags: frill.co, frill, feedback, roadmap, changelog
 Requires at least: 5.7
-Tested up to: 5.7.2
+Tested up to: 5.8
 Requires PHP: 7.2
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,6 +110,12 @@ To support continued development of this plugin into the future with new feature
 3. Frill Administration
 
 == Change log ==
+= 1.0.2 2021-08-02 =
+* Fix mismatch stable version number between readme file and plugin file
+* Change from text input to password input on Frill SSO key input field in settings
+* Escaped user input values, and request parameters
+* Checked support for WordPress 5.8
+
 = 1.0.1 2021-07-09 =
 * Fix on typo in readme file, installation step 3.
 * Change plugin name from Frill SSO Unofficial to Unofficial Frill SSO
