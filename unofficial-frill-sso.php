@@ -7,7 +7,7 @@
  * Author:          Full Stack Press
  * Author URI:      https://gitlab.com/fullstackpress
  * Text Domain:     unofficial-frill-sso
- * Version:         1.0.2
+ * Version:         1.0.3
  *
  */
 if (\is_readable(__DIR__ . '/vendor/autoload.php')) {

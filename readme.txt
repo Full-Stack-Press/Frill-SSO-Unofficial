@@ -2,9 +2,9 @@
 Contributors: zarex, afknet, jessetuttle, reesebess, fullstackpress, fullstackology
 Tags: frill.co, frill, feedback, roadmap, changelog
 Requires at least: 5.7
-Tested up to: 5.8
+Tested up to: 5.8.1
 Requires PHP: 7.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,7 +66,7 @@ Frill can be used by anyone looking to collect feedback from their usersthat eve
 
 1. Upload `Frill-sso plugin` to the `/wp-content/plugins/` directory or install thru WordPress plugin installer.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to your Frill.co site, access your settings from the top right user icon. Go to "Single Sign-On" and input your redirect URL. This is the URL for your site, like `https://feedback.example.com`
+3. Go to your Frill.co site, access your settings from the top right user icon. Go to "Single Sign-On" and input your redirect URL. This is the URL for your site, like `https://example.com`
 4. From the same location copy your SSO Key, this is used to Authenticate your users. The format will be `xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
 5. Go to WordPress Admin dashboard -> Settings -> Frill SSO site and input your Frill.co credentials.
 6. Add a custom link to any menu or button on your site with `?frill_sso_redirect` set as the link.
@@ -110,6 +110,12 @@ To support continued development of this plugin into the future with new feature
 3. Frill Administration
 
 == Change log ==
+= 1.0.3 2021-10-06 =
+* Fix problem on installation when there is no user input in the settings fields
+* Updated readme file
+* Check support for WordPress 5.8.1
+* New Future, added support for custom login page
+
 = 1.0.2 2021-08-02 =
 * Fix mismatch stable version number between readme file and plugin file
 * Change from text input to password input on Frill SSO key input field in settings

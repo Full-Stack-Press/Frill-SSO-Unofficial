@@ -27,7 +27,11 @@ class RedirectHandler
     }
     private function redirect_to_wp_login()
     {
+        $options = get_option('frill_sso_settings');
         $url = wp_login_url(get_home_url() . '?frill_sso_redirect');
+        if($options && isset($options['login']) && $options['login'] !== ''){
+            $url = esc_url($options['login']);
+        }
         \header('Location:' . $url);
         die;
     }

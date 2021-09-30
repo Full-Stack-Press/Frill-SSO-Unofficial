@@ -44,6 +44,7 @@ class Settings
         add_settings_section('frill_sso_api', 'Api Settings', [$this, 'frill_sso_section_text'], 'frill_sso_settings');
         add_settings_field('frill_sso_key', 'SSO KEY *', [$this, 'frill_sso_key_callback'], 'frill_sso_settings', 'frill_sso_api');
         add_settings_field('frill_sso_url', 'Frill Url *', [$this, 'frill_sso_url_callback'], 'frill_sso_settings', 'frill_sso_api');
+        add_settings_field('frill_sso_login', 'WordPress login url', [$this, 'frill_sso_login_url_callback'], 'frill_sso_settings', 'frill_sso_api');
     }
     public function frill_sso_section_text()
     {
@@ -52,10 +53,11 @@ class Settings
     public function frill_sso_key_callback()
     {
         $options = get_option('frill_sso_settings');
-        $value = $options['key'];
-        $placeholder = $value;
-        if (!isset($options['key']) || !$options['key']) {
-            $value = '';
+        $value = '';
+        $placeholder = '';
+        if ($options && isset($options['key']) && $options['key'] !== '') {
+            $value = $options['key'];
+            $placeholder = $value;
         }
         ?>
 			<input id="frill_sso_settings_key" name="frill_sso_settings[key]" type="password" value="<?php 
@@ -68,11 +70,29 @@ class Settings
     public function frill_sso_url_callback()
     {
         $options = get_option('frill_sso_settings');
+        $value = '';
+        if($options && isset($options['url']) && $options['url'] !== ''){
+            $value = $options['url'];
+        }
         ?>
-		<input id="frill_sso_settings_key" name="frill_sso_settings[url]" type="url" value="<?php 
-        echo esc_url($options['url']);
-        ?>" placeholder="https://example.frill.co" "/>
+		<input id="frill_sso_settings_url" name="frill_sso_settings[url]" type="url" value="<?php
+        echo esc_url($value);
+        ?>" placeholder="https://example.frill.co" required/>
 		<?php 
+    }
+
+    public function frill_sso_login_url_callback()
+    {
+        $option = get_option('frill_sso_settings');
+        $value = '';
+        if($option && isset($option['login'])){
+            $value = $option['login'];
+        }
+        ?>
+        <input id="frill_sso_settings_login" name="frill_sso_settings[login]" type="url"
+               value="<?php echo esc_url($value); ?>" placeholder="<?php echo get_home_url() . '/wp-login.php'; ?>"><br>
+        <small><?php echo __('Leave empty if you want to have the default login page', 'unofficial-frill-sso'); ?></small>
+        <?php
     }
 }
 \class_alias('unofficial\\frill\\sso\\Settings', 'Settings', \false);
